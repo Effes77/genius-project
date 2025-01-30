@@ -134,7 +134,7 @@ overflow:hidden;
 /* Hero section */
 .hero-section{
     padding: 272px 0;
-    background-image: url(../images/Hero-section-background.jpg) ;
+    background-image: url(./images/Hero-section-background.jpg) ;
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -293,7 +293,7 @@ overflow:hidden;
 }
 
 .footer {
-    background-image: url(/images/Footer-background.png);
+    background-image: url(./images/Footer-background.png);
     background-color: var(--color-primary-dark);
     background-repeat: no-repeat;
     background-position: center;
