@@ -37,7 +37,9 @@
     --color-brand-light: #cfcfbc;
 }
 
-* {
+*,
+::after,
+::before {
     box-sizing: border-box;
 }
 /* Body */
@@ -52,6 +54,9 @@ body {
 }
 h1, h2, h3, h4, h5, h6, p {
     margin-top: 0;
+}
+a {
+    display: inline-block;
 }
 
 address {
@@ -212,12 +217,6 @@ overflow:hidden;
 }
 /* Chef section */
 
-.chef-title {
-    margin-bottom: 16px;
-    font-size: 40px;
-    font-weight: 600;
-}
-
 .chefs-title {
     max-width: 540px;
     margin: 0 auto 80px;
@@ -230,12 +229,40 @@ overflow:hidden;
     border: 2px solid rgba(207, 207, 188, 1);
     content: '';
 }
-
+.chefs-list {
+    display: flex;
+    gap: 40px 30px;
+    flex-wrap: wrap;
+}
+.chefs-item {
+    flex-basis: calc((100% - 30px) / 2);
+}
+.chef-card {
+    display: flex;
+    gap: 30px;
+}
 .chef-photo {
    border-radius: 4px 4px 4px 200px;
    box-shadow:-16px 16px 0 0 var(--color-primary-light), -16px 16px 0 2px var(--color-secondary-dark);
 }
+.chef-title {
+    margin-bottom: 16px;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.chef-text p {
+    margin-bottom: 24px;
+}
+.chef-text p:last-child {
+    margin-bottom: 0;
+}
 /* Formats section */
+.formats-container {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
 .formats-list{
     display: flex;
     gap: 20px;
@@ -283,6 +310,7 @@ overflow:hidden;
     border: 1px solid var(--color-primary-dark);
     cursor: pointer;
     fill: var(--color-primary-dark);
+    flex-shrink: 0;
 }
 
 .carousel-button:hover {
@@ -296,11 +324,43 @@ overflow:hidden;
 }
 
 /* contacts section */
+.contacts-section {
+    padding-bottom: 96px;
+}
+.contact-container {
+    display: flex;
+    gap: 32px;
+}
 .contact-title {
     margin-bottom: 16px;
 }
+.contact-map {
+    flex-shrink: 0;
+    border: none;
+    border-radius: 16px;
+}
 /* adress section */
-
+.footer {
+    padding: 32px 0;
+}
+.footer-container {
+    display: flex;
+    gap: 20px;
+}
+.footer-nav, 
+.footer-address {
+    display: flex;
+    flex-basis: 50%;
+    gap: 20px;
+}
+.footer-logo, 
+.footer-menu {
+    flex-grow: 1;
+}
+.address-list,
+.address-info {
+    flex-grow: 1;
+}
 .address-link {
     color: var(--color-primary-light);
     font-size: 16px;
