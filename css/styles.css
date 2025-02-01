@@ -43,13 +43,13 @@
     box-sizing: border-box;
 }
 /* Body */
-
 body {
     color: var(--color-primary-dark);
     background-color: var(--color-primary-light);
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: 400;
+    line-height: 1.5;
     margin: 0;
 }
 h1, h2, h3, h4, h5, h6, p {
@@ -70,12 +70,12 @@ ul {
 }
 
 .visually-hidden {
-position:absolute;
-left:-10000px;
-top:auto;
-width:1px;
-height:1px;
-overflow:hidden;
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
 }
 
 .section {
@@ -109,15 +109,21 @@ overflow:hidden;
 .link {
     color: var(--color-primary-light);
     text-decoration: none;
-    line-height: 1.5;
+    transition: color 0.3s;
 }
 .link:hover {
     color: var(--color-brand-normal);
 }
 /* Header */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 32px;
+}
 .header-container {
     display: flex;
-    background-color: bisque;
     align-items: center;
     gap: 40px;
 }
@@ -139,7 +145,11 @@ overflow:hidden;
 /* Hero section */
 .hero-section{
     padding: 272px 0;
-    background-image: url(../images/Hero-section-background.jpg) ;
+    background-image: linear-gradient(102.76deg, 
+    rgba(18, 18, 17, 0.78) 2.03%, 
+    rgba(18, 18, 17, 0.6) 58.46%,
+    rgba(18, 18, 17, 0) 90.36%),
+    url(../images/Hero-section-background.jpg);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -290,8 +300,13 @@ overflow:hidden;
     #31261A 100%);
     border: 1px solid var(--color-secondary-dark);
     border-radius: 16px;
-    
+    cursor: pointer;
+    transition: transform 0.3s;
 }
+.format-card:hover {
+    transform: scale(1.05);
+}
+
 .formats-title {
     margin-bottom: 80px;
 }
@@ -320,7 +335,6 @@ overflow:hidden;
     fill: var(--color-primary-dark);
     flex-shrink: 0;
 }
-
 .carousel-button:hover {
     background-color: var(--color-primary-dark);
 }
@@ -330,7 +344,9 @@ overflow:hidden;
 .carousel-button:hover .carousel-arrow {
     fill: var(--color-primary-light);
 }
-
+.carousel-button.next {
+    transform: rotate(180deg);
+}
 /* contacts section */
 .contacts-section {
     padding-bottom: 96px;
@@ -428,6 +444,8 @@ overflow:hidden;
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 0;
+    transition: opacity 0.4s, visibility 0.4s;
 }
 .backdrop.is-hidden {
     opacity: 0;
@@ -436,8 +454,10 @@ overflow:hidden;
 }
 .modal {
     position: relative;
-    width: 880px;
-    height: 880px;
+    width: 100%;
+    max-width: 880px;
+    height: 100%;
+    max-height: 880px;
     border-radius: 32px;
     background-color: var(--color-primary-light);
 }
