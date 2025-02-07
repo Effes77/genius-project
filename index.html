@@ -22,16 +22,20 @@
               <li><a class="link" href="#formats-section">Формати</a></li>
               <li><a class="link" href="#contacts-section">Контакти</a></li>
             </ul>
-            <!-- Button -->
           </nav>
-          <button class="button modal-btn-open" type="button">
+          <button class="header__button button modal-btn-open" type="button">
             Замовити дзвінок
           </button>
-          <button class="header__burger" type="button">
+          <button class="header__burger menu-btn-open" type="button">
             <svg width="24" height="24">
               <use href="./images/icons.svg#icon-menu"></use>
             </svg>
           </button>
+          <div class="mobile-menu">
+            <button class="mobile-menu__btn-close menu-btn-close" type="button">
+              Close
+            </button>
+          </div>
         </div>
       </div>
     </header>
@@ -41,6 +45,12 @@
           <h1 class="hero-section__title">
             <span class="text-brand">Сучасна</span> пекарня
           </h1>
+          <button
+            class="hero-section__button button modal-btn-open"
+            type="button"
+          >
+            Замовити дзвінок
+          </button>
         </div>
       </section>
       <section class="adventages-section">
@@ -81,13 +91,15 @@
               </p>
             </div>
             <img
+              class="traditions-section__image"
+              srcset="./images/Baker-man.jpg 1x, ./images/Baker-man@2x.jpg 2x"
               src="./images/Baker-man.jpg"
               alt="Чоловік дивиться на батони із посмішкою"
             />
           </div>
         </div>
       </section>
-      <section class="chefs-section section" id="chefs-section">
+      <!-- <section class="chefs-section section" id="chefs-section">
         <div class="container">
           <h2
             class="chefs-section__title section__title section__title--centered"
@@ -208,7 +220,7 @@
             </ul>
             <button class="carousel-button next" type="button">
               <svg class="carousel-arrow" width="16" height="16">
-                <use href="./images/icons.svg#icon-Arrow"></use>
+                <use href="./images/icons.svg#icon-arrow"></use>
               </svg>
             </button>
           </div>
@@ -249,7 +261,6 @@
                     placeholder="Телефон"
                   />
                 </div>
-
                 <div class="contact-section__form-field input">
                   <label class="input__label visually-hidden" for="user-email">
                     Електронна пошта
@@ -285,9 +296,9 @@
             ></iframe>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container">
         <div class="footer-container">
           <nav class="footer-nav">
@@ -346,8 +357,8 @@
           </address>
         </div>
       </div>
-    </footer>
-    <div class="backdrop">
+    </footer> -->
+    <div class="backdrop backdrop__is-hidden">
       <div class="modal">
         <button class="modal__btn-close modal-btn-close" type="button">
           Close
@@ -401,6 +412,7 @@
         </form>
       </div>
     </div>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

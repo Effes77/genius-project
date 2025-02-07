@@ -15,7 +15,7 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-}
+}  
 }
 
 .modal {
@@ -40,7 +40,6 @@
     }
 
     &__button {
-        display: block;
         margin: 0 auto 24px;
     }
 }
