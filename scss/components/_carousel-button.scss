@@ -11,16 +11,19 @@
   border-radius: 50%;
   border: 1px solid var(--color-primary-dark);
   cursor: pointer;
+
+    &.next {
+        transform: rotate(180deg);
+
+    &:hover {
+        background-color: var(--color-primary-dark);
 }
-.carousel-button:hover {
-    background-color: var(--color-primary-dark);
 }
+}
+.carousel-button
 .carousel-arrow {
     fill: var(--color-primary-dark);
 }
 .carousel-button:hover .carousel-arrow {
     fill: var(--color-primary-light);
-}
-.carousel-button.next {
-    transform: rotate(180deg);
 }
